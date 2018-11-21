@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import datetime
+import os
 
 DATA = [
 "#     #    #     #####  #    # ### #     #  #####   ", 
@@ -11,7 +12,7 @@ DATA = [
 "#     # #     #  #####  #    # ### #     #  #####   "]
 
 
-DATE_Start = datetime.datetime(2018, 11, 25)
+DATE_Start = datetime.datetime(2018, 11, 5)
 DATE_Now   = datetime.datetime.now()
 
 DELTA = (DATE_Now - DATE_Start).days
@@ -27,4 +28,6 @@ F.close()
 
 if DATA[Y][X] == "#" :
 
-	print "OK"
+    print "OK"
+    os.system('/usr/bin/git commit -am "Go...!!!"')
+    os.system('/usr/bin/git push')
